@@ -32,5 +32,4 @@ const post = defineCollection({
 			ogImage: z.string().optional(),
 		}),
 });
-
 export const collections = { post };

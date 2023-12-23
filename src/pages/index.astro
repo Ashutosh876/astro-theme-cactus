@@ -13,42 +13,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 		title: "Astro",
 		desc: "Build fast websites, faster.",
 		href: "https://astro.build",
-	},
-	{
-		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
-		href: "https://docs.astro.build/en/guides/assets/",
-	},
-	{
-		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-	},
-	{
-		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-	},
-	{
-		title: "MDX",
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-	},
-	{
-		title: "Satori",
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-	},
-	{
-		title: "Pagefind",
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-	},
-	{
-		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-	},
+	}
 ];
 ---
 
@@ -56,12 +21,18 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 	<section>
 		<h1 class="title mb-6">Hi there!</h1>
 		<p class="mb-4">
-			I am a software engineer with a passion for building & designing user experiences that  
-			stand out. Presently, I am spearheading the development of cutting-edge Payment Systems at 
-			JP Morgan Chase, where I leverage my expertise to drive technological 
-			advancements. My focus extends to Artificial Intelligence, Distributed Systems as well. 
-			I completed my engineering from BITS Pilani, and have previously worked at Nvidia Graphics 
-			within the Autonomous vehicles space.
+			I am a software engineer with a passion for building & designing user experiences that
+			stand out. Presently, I am spearheading the development of cutting-edge Payment Systems at
+			<a
+        class="cactus-link inline-block"
+        href="https://www.jpmorgan.com/payments/solutions/access"
+      >JP Morgan Chase & Co.</a>, where I leverage my expertise to drive technological
+			advancements. My focus extends to Artificial Intelligence, Distributed Systems as well.
+			I completed my engineering from BITS Pilani, and have previously worked at
+      <a
+        class="cactus-link inline-block"
+        href="https://www.nvidia.com/en-in/self-driving-cars/"
+      >Nvidia Graphics</a> within the Autonomous vehicles space.
 		</p>
 		<SocialList />
 	</section>
@@ -90,7 +61,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 							class="cactus-link inline-block"
 						>
 							{title}
-						</a>: 
+						</a>:
 						<p class="inline-block sm:mt-2">{desc}</p>
 					</li>
 				))
