@@ -8,13 +8,84 @@ const meta = {
 	title: "About",
 	description: "",
 };
+
+const cactusTech: Array<{ title: string; desc: string; href: string }> = [
+  {
+    title: "Languages",
+    desc: "Java, Python, C++, HTML, CSS, Javascript, Typescript, React, Terraform",
+    href: null
+  },
+  {
+    title: "Data-Migration",
+    desc: "Developed a Data Migration service with Key-based incremental replication for phased live traffic migration " +
+      "from the application on legacy data center.",
+    href: null
+  },
+  {
+    title: "Frameworks ",
+    desc: "Springboot, Hibernate, RESTAPIs, JUnit, FastAPI, Django, NodeJS, PySpark",
+    href: null
+  },
+  {
+    title: "GenAI ",
+    desc: "Built a plugin on top of ChatGPT to play and recommend songs on SPOTIFY based on user prompts.",
+    href: null
+  },
+  {
+    title: "Cloud",
+    desc: "Designed and implemented the AWS infrastructure for 4 Applications using ECS Fargate, NLB, Lambda, RDS, Route53 and Terraform.",
+    href: null
+  },
+  {
+    title: "Other Tools",
+    desc: "Linux, ActiveMQ, Kafka, Oracle, PostgreSQL",
+    href: null
+  },
+  {
+    title: "SRE DevOps",
+    desc: "AWS, Docker, Kubernetes, Jenkins, CI/CD, Grafana, Splunk",
+    href: null
+  }
+];
+
+const certifications: Array<{ title: string; desc: string; href: string }> = [
+  {
+    title: "AWS Certified - Solutions Architect Associate ",
+    desc: "I recently got certified with AWS, demonstrating my expertise in designing and implementing scalable, secure, and " +
+      "cost-effective cloud solutions.",
+    href: "https://www.credly.com/badges/2052be13-b4c1-41b3-9129-4099e1a8de66/public_url",
+  }
+];
+
+const presentations: Array<{ title: string; desc: string; href: string }> = [
+  {
+    title: "AWS - Resiliency and Failover Mechanisms",
+    desc: "Presented to 2700-strong audience at Firmwide Payments Tech India, highlighting AWS resiliency and failover " +
+      "mechanisms, demonstrating critical strategies for seamless operations.",
+    href: "",
+  }
+];
+
 ---
 
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-			Hey!
+			Hi! I'm Ashutosh, a software engineer with a passion for building & designing user experiences that
+      stand out. Presently, I am spearheading the development of cutting-edge Payment Systems at
+      <a
+        class="cactus-link inline-block"
+        href="https://www.jpmorgan.com/payments/solutions/access"
+      >JP Morgan Chase & Co.</a>, where I leverage my expertise to drive technological
+      advancements. My focus extends to Artificial Intelligence, Distributed Systems as well.
+      I completed my engineering from BITS Pilani, and have previously worked at
+      <a
+        class="cactus-link inline-block"
+        href="https://www.nvidia.com/en-in/self-driving-cars/"
+      >Nvidia Graphics</a> within the Autonomous vehicles space.
+
+
 		</p>
 		<div class="flex justify-center ">
 			<Image
@@ -29,4 +100,65 @@ const meta = {
 			<li>.</li>
 		</ul>
 	</div>
+  <section class="mt-16">
+    <h2 class="title mb-4 text-xl">Technologies</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      {
+        cactusTech.map(({ href, title, desc }) => (
+          <li>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cactus-link inline-block"
+            >
+              {title}
+            </a>:
+            <p class="inline-block sm:mt-2">{desc}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-16">
+    <h2 class="title mb-4 text-xl">Certifications</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      {
+        certifications.map(({ href, title, desc }) => (
+          <li>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cactus-link inline-block"
+            >
+              {title}
+            </a>:
+            <p class="inline-block sm:mt-2">{desc}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <section class="mt-16">
+    <h2 class="title mb-4 text-xl">Speaking Engagements</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      {
+        presentations.map(({ href, title, desc }) => (
+          <li>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cactus-link inline-block"
+            >
+              {title}
+            </a>:
+            <p class="inline-block sm:mt-2">{desc}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 </PageLayout>
